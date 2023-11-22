@@ -1,6 +1,8 @@
 /*
-  У вас є тип Form, який містить інформацію про форму, включаючи поле errors. 
-  Ви хочете створити новий тип Params, який включає всі поля з Form, крім errors.
+  У вас є тип Form, який містить інформацію про форму, включаючи поле
+   errors. 
+  Ви хочете створити новий тип Params, який включає всі поля з Form, 
+  крім errors.
 */
 
 type Errors = {
@@ -19,6 +21,13 @@ type Form = {
 };
 
 // Реалізуйте Params так, щоб унеможливити поле 'errors' з типу Form
-type Params = Form;
+type Params = Omit<Form, 'errors'>;
+const params: Params = {
+  email: 'rjfhk@vm',
+  firstName: 'Max',
+  lastName: "Burn",
+  phone:'75883958',
+  // errors: {}
+}
 
 export {};
