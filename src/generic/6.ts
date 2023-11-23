@@ -17,10 +17,10 @@ type User = {
 function createOrUpdateUser( initialValues: Partial<User>): User {
   // Оновлення користувача
   const defaultUser: User = {
-    name: '',
-    surname: '',
-    email: '',
-    password: '',
+    name: 'Max',
+    surname: 'Dou',
+    email: 'max@mail.com',
+    password: 'pass1234',
   }
   return {...defaultUser,...initialValues};
 }
